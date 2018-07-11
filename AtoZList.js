@@ -85,6 +85,7 @@ export default class AtoZList extends Component {
             dataSource={this.state.dataSource}
             renderCell={this.props.renderCell}
             renderSectionHeader={this.props.renderSection}
+            removeClippedSubviews={false}
             incrementDelay={16}
             initialNumToRender={8}
             pageSize={Platform.OS === 'ios' ? 15 : 8}
