@@ -28,8 +28,8 @@ import AlphabetPicker from './AlphabetPicker';
 
 export default class AtoZList extends Component {
   static propTypes = {
-    sectionHeaderHeight: PropTypes.number.isRequired,
-    cellHeight: PropTypes.number.isRequired,
+    sectionHeaderHeight: PropTypes.number,
+    cellHeight: PropTypes.number,
     data: PropTypes.object.isRequired,
     renderCell: PropTypes.func,
     renderSection: PropTypes.func,
