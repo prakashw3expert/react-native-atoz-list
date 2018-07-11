@@ -6,7 +6,7 @@ class LetterPicker extends Component {
 
     render() {
         return (
-            <Text style={{ fontSize: 11, fontWeight: 'bold' }}>
+            <Text style={this.props.letterStyle}>
                 {this.props.letter}
             </Text>
         );
@@ -79,7 +79,7 @@ export default class AlphabetPicker extends Component {
     render() {
         const {alphabet} = this.state
         this._letters = (
-            alphabet.map((letter) => <LetterPicker letter={letter} key={letter} />)
+            alphabet.map((letter) => <LetterPicker letter={letter} key={letter} letterStyle={this.props.letterStyle} />)
         );
 
         return (
