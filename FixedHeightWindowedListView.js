@@ -111,6 +111,7 @@ export default class FixedHeightWindowedListView extends Component {
         scrollEventThrottle={50}
         removeClippedSubviews={this.props.numToRenderAhead === 0 ? false : true}
         automaticallyAdjustContentInsets={false}
+        refreshControl={this.props.refreshControl}
         {...this.props}
         ref={(ref) => { this.scrollRef = ref; }}
         onScroll={this.__onScroll}>
@@ -230,7 +231,8 @@ export default class FixedHeightWindowedListView extends Component {
       rows.push(
         <CellRenderer
           key={key}
-          shouldUpdate={data !== this.__rowCache[key]}
+          //shouldUpdate={data !== this.__rowCache[key]}
+          shouldUpdate={true}
           render={this.__renderRow.bind(this, data, parentSectionId, idx, key)}
         />
       );
