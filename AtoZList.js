@@ -81,6 +81,7 @@ export default class AtoZList extends Component {
       <View style={{flex: 1}}>
         <View style={styles.container}>
           <FixedHeightWindowedListView
+            refreshControl={(this.props.refreshControl) ? this.props.refreshControl : null}
             {...this.props}
             ref={view => this._listView = view}
             dataSource={this.state.dataSource}
